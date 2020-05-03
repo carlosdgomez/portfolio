@@ -1,0 +1,6 @@
+include 'common'
+include 'core'
+include 'adapters:persistence'
+include 'adapters:web'
+include 'application'
+include 'testdata'

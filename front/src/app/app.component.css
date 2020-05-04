@@ -1,0 +1,45 @@
+.jumbotron {
+  background-color: #fcfcfc;
+  margin-top: 50px;
+}
+
+.card-columns {
+  column-count: 1;
+}
+
+.container {
+  text-align: center;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.toolbar {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #c7254e;
+  color: white;
+  font-weight: 600;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+.toolbar h1 {
+  margin-left: 60px;
+  font-size: 2rem;
+}
+
+.toolbar #twitter-logo {
+  height: 40px;
+  margin: 0 16px;
+}
+
+.toolbar #twitter-logo:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}

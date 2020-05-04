@@ -7,6 +7,7 @@ import com.zemoga.portfolio.core.port.in.UpdatePortfolioUseCase;
 import com.zemoga.portfolio.core.port.in.UpdatePortfolioUseCase.UpdatePortfolioCommand;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @WebAdapter
 @RestController
+@CrossOrigin
 @RequiredArgsConstructor
 public class UpdatePortfolioController {
 

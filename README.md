@@ -2,6 +2,8 @@
 
 [![codecov](https://codecov.io/gh/carlosdgomez/portfolio/branch/master/graph/badge.svg)](https://codecov.io/gh/carlosdgomez/portfolio)
 
+![Principal](docs/principal.png)
+
 ## REQUIREMENTS
 
 *  `docker`
@@ -62,10 +64,66 @@ Each of the following steps **MUST** be run from the `root folder` of the projec
 **NOTE:** If you don't want to modify the `.env` file, you can set the above environment variables on your host machine and get the same result.
 
 ### Run
-	docker-compose up -d api
+	docker-compose up --build -d back
+
+**NOTE:** Port `8080` must be available on the host machine.
 
 ### Log
-	docker-compose logs -f api
+	docker-compose logs -f back
 
 ### API docs
 You will be able to access `Swagger` documentation [here](http://localhost:8080/api/swagger-ui.html).
+
+## FRONTEND
+
+### Framework and libraries
+
+* `Angular 8`
+* `Node.js 12`
+* `npm`
+* `Bootstrap 4`
+* `ngx-twitter-timeline`
+* `NGINX`
+
+### Run
+	docker-compose up -d --build front
+
+**NOTE:** Port `9000` must be available on the host machine.
+
+### Log
+	docker-compose logs -f front
+
+### Open web app
+You can go to a web browser and access the web page from [here](http://localhost:9000).
+
+### Features
+
+#### Card view
+Every record fetched from the database is represented with this view
+
+![Principal](docs/principal.png)
+
+### Edit mode
+It is possible to edit by clicking on `Edit`
+
+![Edit](docs/edit.png)
+
+### Show Twitter timeline
+When you click on `Show Tweets`, it will retrieve the 5 most recent tweets
+
+![TwitterTimeline](docs/timeline.png)
+
+### Pager
+The web app allows you to iterate through all records in the database
+
+![Pager](docs/pager.png)
+
+If there's no more records to read, this card is shown
+
+![LastPage](docs/last.png)
+
+## Put services down
+	docker-compose down
+
+## Total time to complete the test
+        11 hours

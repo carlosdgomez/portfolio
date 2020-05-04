@@ -6,12 +6,14 @@ import com.zemoga.portfolio.domain.Portfolio;
 import java.util.List;
 import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @WebAdapter
 @RestController
+@CrossOrigin
 @RequiredArgsConstructor
 public class SlicePortfoliosController {
 
